@@ -1,1 +1,54 @@
-{"webpackConfigJaid":"nodeLib","version":"0.1.0","author":"Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)","dependencies":{},"devDependencies":{"@absolunet/fsp":"^1.6.2","acorn":"^8.0.4","babel-jest":"^26.6.3","babel-preset-jaid":"9.0.0","browserslist-config-jaid-node":"^3.0.0","eslint":"^7.17.0","eslint-config-jaid":"1.49.0","jest":"^26.6.3","rimraf":"^3.0.2","webpack":"^4.44.2","webpack-config-jaid":"11.13.0"},"scripts":{"clean":"rimraf dist/","babel:prod":"rimraf dist/transpiled/production && NODE_ENV=production babel --out-dir dist/transpiled/production --source-maps true src","babel:dev":"rimraf dist/transpiled/development && NODE_ENV=development babel --out-dir dist/transpiled/development src","babel:test":"rimraf dist/transpiled/test && NODE_ENV=test babel --out-dir dist/transpiled/test src","build:prod":"NODE_ENV=production webpack","build:dev":"NODE_ENV=development webpack","test":"npm run build:prod && NODE_ENV=production MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/production) jest --runInBand","test:coverage":"npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json","test:dev":"NODE_ENV=test jest --runInBand","test:debug":"DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand","prepareActionJest":"npm run build:prod"},"name":"stat-size-text","description":"Promise that returns the size of a file or directory as string.","funding":"https://github.com/sponsors/jaid","repository":{"type":"git","url":"https://github.com/jaid/stat-size-text"},"homepage":"https://github.com/Jaid/stat-size-text","keywords":["bytes","directory","disk","file","folder","fs","node","node-js","promise","size","utility","volume"]}
+{
+  "webpackConfigJaid": "nodeLib",
+  "version": "0.1.0",
+  "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
+  "dependencies": {},
+  "devDependencies": {
+    "@absolunet/fsp": "^1.6.2",
+    "acorn": "^8.0.4",
+    "babel-jest": "^26.6.3",
+    "babel-preset-jaid": "9.0.0",
+    "browserslist-config-jaid-node": "^3.0.0",
+    "eslint": "^7.17.0",
+    "eslint-config-jaid": "1.49.0",
+    "jest": "^26.6.3",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.44.2",
+    "webpack-config-jaid": "11.13.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "babel:prod": "rimraf dist/transpiled/production && NODE_ENV=production babel --out-dir dist/transpiled/production --source-maps true src",
+    "babel:dev": "rimraf dist/transpiled/development && NODE_ENV=development babel --out-dir dist/transpiled/development src",
+    "babel:test": "rimraf dist/transpiled/test && NODE_ENV=test babel --out-dir dist/transpiled/test src",
+    "build:prod": "NODE_ENV=production webpack",
+    "build:dev": "NODE_ENV=development webpack",
+    "test": "npm run build:prod && NODE_ENV=production MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/production) jest --runInBand",
+    "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
+    "test:dev": "NODE_ENV=test jest --runInBand",
+    "test:debug": "DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
+    "prepareActionJest": "npm run build:prod"
+  },
+  "name": "stat-size-text",
+  "description": "Promise that returns the size of a file or directory as string.",
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/stat-size-text"
+  },
+  "homepage": "https://github.com/Jaid/stat-size-text",
+  "keywords": [
+    "bytes",
+    "directory",
+    "disk",
+    "file",
+    "folder",
+    "fs",
+    "node",
+    "node-js",
+    "promise",
+    "size",
+    "utility",
+    "volume"
+  ]
+}
