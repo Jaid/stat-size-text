@@ -1,4 +1,5 @@
-import fs from "fs/promises"
+import prettyBytes from "pretty-bytes"
+import statSize from "stat-size"
 
 /** @module stat-size-text */
 
