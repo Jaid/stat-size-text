@@ -2,7 +2,10 @@
   "webpackConfigJaid": "nodeLib",
   "version": "0.1.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
-  "dependencies": {},
+  "dependencies": {
+    "pretty-bytes": "^5.5.0",
+    "stat-size": "^1.0.1"
+  },
   "devDependencies": {
     "@absolunet/fsp": "^1.6.2",
     "acorn": "^8.0.4",
