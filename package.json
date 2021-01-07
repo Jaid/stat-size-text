@@ -40,18 +40,5 @@
     "url": "https://github.com/jaid/stat-size-text"
   },
   "homepage": "https://github.com/Jaid/stat-size-text",
-  "keywords": [
-    "bytes",
-    "directory",
-    "disk",
-    "file",
-    "folder",
-    "fs",
-    "node",
-    "node-js",
-    "promise",
-    "size",
-    "utility",
-    "volume"
-  ]
+  "keywords": []
 }
