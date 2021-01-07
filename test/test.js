@@ -6,11 +6,11 @@ const {default: statSizeText} = indexModule
 it("should run", async () => {
   const file = path.join(__dirname, "pikachu_8x8.png")
   const size = await statSizeText(file)
-  expect(size).toBe(129)
+  expect(size).toBe("129 B")
 })
 
 it("should return null for missing files", async () => {
   const file = path.join(__dirname, "pikachu_9x9.png")
   const size = await statSizeText(file)
-  expect(size).toBe(null)
+  expect(size).toBe("[not found]")
 })

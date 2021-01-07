@@ -4,18 +4,13 @@ import statSize from "stat-size"
 /** @module stat-size-text */
 
 /**
- * @param {string} mimeType
- * @param {Buffer} buffer
+ * @param {string} file
  * @return {Promise<string>}
  */
 export default async file => {
-  try {
-    const stat = await fs.stat(file)
-    return stat.size
-  } catch (error) {
-    if (error.code === "ENOENT") {
-      return null
-    }
-    throw error
+  const size = await statSize(file)
+  if (size === null) {
+    return "[not found]"
   }
+  return prettyBytes(size)
 }
